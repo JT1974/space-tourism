@@ -1,7 +1,7 @@
 export default function Glover() {
 	return (
 		<>
-			<img src='/space-tourism/assets/crew/image-victor-glover.webp' alt='Victor Glover' />
+			<img src='/assets/crew/image-victor-glover.webp' alt='Victor Glover' />
 			<h4>Pilot</h4>
 			<h3>Victor Glover</h3>
 			<p>

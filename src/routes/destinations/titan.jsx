@@ -1,7 +1,7 @@
 export default function Titan() {
 	return (
 		<>
-			<img src='/space-tourism/assets/destination/image-titan.webp' alt='Titan' />
+			<img src='/assets/destination/image-titan.webp' alt='Titan' />
 			<h2>Titan</h2>
 			<p>
 				The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a

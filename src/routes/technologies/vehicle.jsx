@@ -1,7 +1,7 @@
 export default function Vehicle() {
 	return (
 		<>
-			<img src='/space-tourism/assets/technology/image-launch-vehicle-landscape.jpg' alt='Launch vehicle' />
+			<img src='/assets/technology/image-launch-vehicle-landscape.jpg' alt='Launch vehicle' />
 			<h4>The terminology...</h4>
 			<h3>Launch vehicle</h3>
 			<p>

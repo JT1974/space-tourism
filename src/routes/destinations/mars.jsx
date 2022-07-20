@@ -1,7 +1,7 @@
 export default function Mars() {
 	return (
 		<>
-			<img src='/space-tourism/assets/destination/image-mars.webp' alt='Mars' />
+			<img src='/assets/destination/image-mars.webp' alt='Mars' />
 			<h2>Mars</h2>
 			<p>
 				Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary

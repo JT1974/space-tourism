@@ -1,7 +1,7 @@
 export default function Shuttleworth() {
 	return (
 		<>
-			<img src='/space-tourism/assets/crew/image-mark-shuttleworth.webp' alt='Mark Shuttleworth' />
+			<img src='/assets/crew/image-mark-shuttleworth.webp' alt='Mark Shuttleworth' />
 			<h4>Mission Specialist</h4>
 			<h3>Mark Shuttleworth</h3>
 			<p>

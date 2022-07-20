@@ -1,7 +1,7 @@
 export default function Ansari() {
 	return (
 		<>
-			<img src='/space-tourism/assets/crew/image-anousheh-ansari.webp' alt='Anousheh Ansari' />
+			<img src='/assets/crew/image-anousheh-ansari.webp' alt='Anousheh Ansari' />
 			<h4>Flight Engineer</h4>
 			<h3>Anousheh Ansari</h3>
 			<p>

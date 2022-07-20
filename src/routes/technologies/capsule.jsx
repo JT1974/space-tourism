@@ -1,7 +1,7 @@
 export default function Capsule() {
 	return (
 		<>
-			<img src='/space-tourism/assets/technology/image-space-capsule-landscape.jpg' alt='Space capsule' />
+			<img src='/assets/technology/image-space-capsule-landscape.jpg' alt='Space capsule' />
 			<h4>The terminology...</h4>
 			<h3>Space capsule</h3>
 			<p>

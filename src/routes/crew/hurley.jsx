@@ -1,7 +1,7 @@
 export default function Hurley() {
 	return (
 		<>
-			<img src='/space-tourism/assets/crew/image-douglas-hurley.webp' alt='Douglas Hurley' />
+			<img src='/assets/crew/image-douglas-hurley.webp' alt='Douglas Hurley' />
 			<h4>Commander</h4>
 			<h3>Douglas Hurley</h3>
 			<p>

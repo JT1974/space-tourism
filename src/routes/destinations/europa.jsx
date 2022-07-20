@@ -1,7 +1,7 @@
 export default function Europa() {
 	return (
 		<>
-			<img src='/space-tourism/assets/destination/image-europa.webp' alt='Europa' />
+			<img src='/assets/destination/image-europa.webp' alt='Europa' />
 			<h2>Europa</h2>
 			<p>
 				The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy

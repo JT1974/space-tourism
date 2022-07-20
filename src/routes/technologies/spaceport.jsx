@@ -1,7 +1,7 @@
 export default function Spaceport() {
 	return (
 		<>
-			<img src='/space-tourism/assets/technology/image-spaceport-landscape.jpg' alt='Spaceport' />
+			<img src='/assets/technology/image-spaceport-landscape.jpg' alt='Spaceport' />
 			<h4>The terminology...</h4>
 			<h3>Spaceport</h3>
 			<p>

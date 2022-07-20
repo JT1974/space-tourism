@@ -1,11 +1,30 @@
 import { Outlet } from 'react-router-dom'
-import CrewNavigation from '../components/CrewNavigation'
+import Navigation from '../components/Navigation'
 
 export default function Crew() {
 	return (
 		<>
 			<h5>02 Meet your crew</h5>
-			<CrewNavigation />
+			<Navigation
+				links={[
+					{
+						path: '/crew',
+						text: 'Crew',
+					},
+					{
+						path: 'shuttleworth',
+						text: 'Shuttleworth',
+					},
+					{
+						path: 'glover',
+						text: 'Glover',
+					},
+					{
+						path: 'ansari',
+						text: 'Ansari',
+					},
+				]}
+			/>
 			<Outlet />
 		</>
 	)

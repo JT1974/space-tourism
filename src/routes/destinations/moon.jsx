@@ -1,7 +1,7 @@
 export default function Moon() {
 	return (
 		<>
-			<img src='/space-tourism/assets/destination/image-moon.webp' alt='Moon' />
+			<img src='/assets/destination/image-moon.webp' alt='Moon' />
 			<h2>Moon</h2>
 			<p>
 				See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective
