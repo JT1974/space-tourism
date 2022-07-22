@@ -3,6 +3,7 @@ const Context = React.createContext()
 
 function ContextProvider(props) {
 	const [JSONData, setJSONData] = useState([])
+	const [menuOpen, setMenuOpen] = useState(false)
 
 	useEffect(() => {
 		fetch('./assets/data.json')
@@ -16,6 +17,8 @@ function ContextProvider(props) {
 				destinations: JSONData.destinations,
 				crew: JSONData.crew,
 				technology: JSONData.technology,
+				menuOpen,
+				setMenuOpen,
 			}}
 		>
 			{props.children}
