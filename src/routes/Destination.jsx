@@ -8,10 +8,22 @@ const Hero = styled.section`
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
+	width: 100%;
 
 	img {
 		width: 170px;
 		height: 170px;
+	}
+
+	@media screen and (min-width: 768px) {
+		padding-top: 1rem;
+		padding-left: 1rem;
+
+		img {
+			width: 300px;
+			height: 300px;
+			margin: 1.5rem 0;
+		}
 	}
 
 	@media screen and (min-width: 1440px) {
@@ -85,6 +97,27 @@ const Body = styled.section`
 
 		.subHeading-1 {
 			color: var(--title-color);
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		nav button {
+			font-size: 16px;
+			line-height: 19px;
+		}
+		article {
+			padding-bottom: 3rem;
+
+			h2 {
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		.planet-data {
+			padding: 0 3.5rem;
+			flex-direction: row;
+			justify-content: space-around;
+			width: 100%;
 		}
 	}
 `
