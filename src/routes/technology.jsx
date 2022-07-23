@@ -4,17 +4,17 @@ import PageTitle from '../components/PageTitle'
 import { Context } from '../Context'
 
 const Hero = styled.section`
+	padding-top: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
+	width: 100%;
 
-	img {
-		height: 170px;
-	}
-
-	@media screen and (min-width: 1440px) {
-		flex-direction: row;
+	@media screen and (min-width: 768px) {
+		padding-top: 2.5rem;
+		padding-left: 2.5rem;
+		margin-bottom: 1.5rem;
 	}
 `
 
@@ -23,7 +23,18 @@ const Body = styled.section`
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
-	max-width: 500px;
+	width: 100vw;
+
+	.image-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+
+		img {
+			width: 100%;
+		}
+	}
 
 	nav {
 		display: flex;
@@ -37,6 +48,8 @@ const Body = styled.section`
 			border: 1px solid var(--white-25);
 			background: transparent;
 			color: var(--title-color);
+			font-size: 16px;
+			line-height: 18px;
 
 			&:hover {
 				border: 1px solid var(--title-color);
@@ -54,6 +67,7 @@ const Body = styled.section`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		padding: 1.5rem;
 
 		h3 {
 			color: var(--title-color);
@@ -66,6 +80,24 @@ const Body = styled.section`
 
 		p {
 			color: var(--text-color);
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		nav {
+			margin-top: 1.5rem;
+
+			button {
+				width: 60px;
+				height: 60px;
+				font-size: 24px;
+				line-height: 27.5px;
+			}
+		}
+
+		article {
+			padding-top: 0.75rem;
+			width: 500px;
 		}
 	}
 `
@@ -82,9 +114,11 @@ export default function Technology() {
 				<PageTitle>
 					<span>03</span> Space launch 101
 				</PageTitle>
-				<img src={data?.images.landscape} alt={data?.name} />
 			</Hero>
 			<Body>
+				<div className='image-container'>
+					<img src={data?.images.landscape} alt={data?.name} />
+				</div>
 				<nav>
 					<button
 						className={data?.name === 'Launch vehicle' ? 'active' : ''}

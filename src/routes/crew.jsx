@@ -4,28 +4,37 @@ import PageTitle from '../components/PageTitle'
 import { Context } from '../Context'
 
 const Hero = styled.section`
+	padding-top: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
 	width: 100%;
-	border-bottom: 1px solid var(--horizontal-line);
 
-	img {
-		height: 222px;
-	}
-
-	@media screen and (min-width: 1440px) {
-		flex-direction: row;
+	@media screen and (min-width: 768px) {
+		padding-top: 2.5rem;
+		padding-left: 2.5rem;
 	}
 `
 
 const Body = styled.section`
+	padding: 0 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
-	max-width: 500px;
+
+	.image-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		border-bottom: 1px solid var(--horizontal-line);
+
+		img {
+			height: 222px;
+		}
+	}
 
 	nav {
 		display: flex;
@@ -71,6 +80,25 @@ const Body = styled.section`
 			color: var(--text-color);
 		}
 	}
+
+	@media screen and (min-width: 768px) {
+		flex-direction: column-reverse;
+		gap: 2.5rem;
+
+		article {
+			margin-top: 2rem;
+
+			p {
+				width: 592px;
+				height: 84px;
+			}
+		}
+		.image-container {
+			img {
+				height: 532px;
+			}
+		}
+	}
 `
 
 export default function Crew() {
@@ -85,9 +113,11 @@ export default function Crew() {
 				<PageTitle>
 					<span>02</span> Meet your crew
 				</PageTitle>
-				<img src={data?.images.webp} alt={data?.name} />
 			</Hero>
 			<Body>
+				<div className='image-container'>
+					<img src={data?.images.webp} alt={data?.name} />
+				</div>
 				<nav>
 					<button
 						className={data?.name === 'Douglas Hurley' ? 'active' : ''}

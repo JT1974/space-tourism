@@ -2,7 +2,8 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Body = styled.section`
-	margin-top: 2rem;
+	margin-top: 3rem;
+	padding: 0 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -10,7 +11,7 @@ const Body = styled.section`
 	max-width: 450px;
 
 	@media screen and (min-width: 768px) {
-		margin-top: 5rem;
+		margin-top: 6.5rem;
 		margin-bottom: 7.5rem;
 		gap: 2rem;
 	}

@@ -1,12 +1,3 @@
-/*
-	Your users should be able to:
-
-	View the optimal layout for each of the website's pages depending on their device's screen size
-	See hover states for all interactive elements on the page
-	View each page and be able to toggle between the tabs to see new information
-
-	TODO: minden oldalon kipróbálni a menüt megnyitva melléklikkelni egy linkra, hogy bezáródik-e a menü
-*/
 import { useEffect, useState } from 'react'
 import { Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
@@ -24,11 +15,9 @@ const Container = styled.div`
 	width: 100vw;
 	height: 100%;
 	min-height: 100vh;
-	padding: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1.5rem;
 	background: var(--background-color);
 	background-size: cover;
 	background-position: center center;

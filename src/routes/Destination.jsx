@@ -4,39 +4,37 @@ import PageTitle from '../components/PageTitle'
 import { Context } from '../Context'
 
 const Hero = styled.section`
+	padding-top: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
 	width: 100%;
 
-	img {
-		width: 170px;
-		height: 170px;
-	}
-
 	@media screen and (min-width: 768px) {
-		padding-top: 1rem;
-		padding-left: 1rem;
-
-		img {
-			width: 300px;
-			height: 300px;
-			margin: 1.5rem 0;
-		}
-	}
-
-	@media screen and (min-width: 1440px) {
-		flex-direction: row;
+		padding-top: 2.5rem;
+		padding-left: 2.5rem;
 	}
 `
 
 const Body = styled.section`
+	padding: 0 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
-	max-width: 500px;
+
+	.image-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+
+		img {
+			width: 170px;
+			height: 170px;
+		}
+	}
 
 	nav {
 		display: flex;
@@ -101,10 +99,22 @@ const Body = styled.section`
 	}
 
 	@media screen and (min-width: 768px) {
+		padding: 0 6rem;
+
+		.image-container {
+			padding: 1.5rem 0;
+
+			img {
+				width: 300px;
+				height: 300px;
+			}
+		}
+
 		nav button {
 			font-size: 16px;
 			line-height: 19px;
 		}
+
 		article {
 			padding-bottom: 3rem;
 
@@ -134,9 +144,11 @@ export default function Destination() {
 				<PageTitle>
 					<span>01</span> Pick your destination
 				</PageTitle>
-				<img src={data?.images.webp} alt={data?.name} />
 			</Hero>
 			<Body>
+				<div className='image-container'>
+					<img src={data?.images.webp} alt={data?.name} />
+				</div>
 				<nav>
 					<button className={data?.name === 'Moon' ? 'active' : ''} onClick={() => setDestination('Moon')}>
 						Moon
