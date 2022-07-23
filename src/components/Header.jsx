@@ -38,7 +38,7 @@ const HeaderBar = styled.header`
 		z-index: 2;
 
 		@supports (-moz-appearance: none) {
-			background: rgba(0, 0, 0, 0.85);
+			background: rgba(0, 0, 0, 0.75);
 		}
 
 		.closeMenu {
@@ -52,7 +52,7 @@ const HeaderBar = styled.header`
 			display: block;
 			width: 100%;
 			border-right: 4px solid transparent;
-			transition: border-color 0.75s ease-in-out;
+			transition: border-color 0.5s ease-in-out;
 
 			span {
 				font-family: var(--sub-font-face);
@@ -60,17 +60,19 @@ const HeaderBar = styled.header`
 			}
 		}
 
-		.nav-text:hover,
-		.nav-text:active {
-			border-color: var(--title-color);
+		.nav-text:hover {
+			border-color: var(--title-color-hovered);
+		}
+
+		&::backdrop {
+			background: rgba(255, 255, 255, 0.04);
 		}
 	}
 
-	.main-navigation::backdrop {
-		background: rgba(255, 255, 255, 0.04);
-	}
-
 	@media screen and (min-width: 768px) {
+		padding: 0;
+		padding-left: 2.5rem;
+
 		.openMenu {
 			display: none;
 		}
@@ -90,6 +92,10 @@ const HeaderBar = styled.header`
 			gap: 2.25rem;
 			padding: 0 3rem;
 
+			@supports (-moz-appearance: none) {
+				background: rgba(255, 255, 255, 0.1);
+			}
+
 			.closeMenu {
 				display: none;
 			}
@@ -100,6 +106,8 @@ const HeaderBar = styled.header`
 		}
 	}
 `
+
+const activeLink = { borderColor: 'var(--title-color)' }
 
 export default function Header() {
 	const { menuOpen, setMenuOpen } = useContext(Context)
@@ -120,16 +128,36 @@ export default function Header() {
 					alt='Close menu'
 					onClick={() => setMenuOpen(false)}
 				/>
-				<NavLink className='nav-text' to='/' onClick={() => setMenuOpen(false)}>
+				<NavLink
+					className='nav-text'
+					to='/'
+					style={({ isActive }) => (isActive ? activeLink : undefined)}
+					onClick={() => setMenuOpen(false)}
+				>
 					<span>00</span> Home
 				</NavLink>
-				<NavLink className='nav-text' to='/destination' onClick={() => setMenuOpen(false)}>
+				<NavLink
+					className='nav-text'
+					to='/destination'
+					style={({ isActive }) => (isActive ? activeLink : undefined)}
+					onClick={() => setMenuOpen(false)}
+				>
 					<span>01</span> Destination
 				</NavLink>
-				<NavLink className='nav-text' to='/crew' onClick={() => setMenuOpen(false)}>
+				<NavLink
+					className='nav-text'
+					to='/crew'
+					style={({ isActive }) => (isActive ? activeLink : undefined)}
+					onClick={() => setMenuOpen(false)}
+				>
 					<span>02</span> Crew
 				</NavLink>
-				<NavLink className='nav-text' to='/technology' onClick={() => setMenuOpen(false)}>
+				<NavLink
+					className='nav-text'
+					to='/technology'
+					style={({ isActive }) => (isActive ? activeLink : undefined)}
+					onClick={() => setMenuOpen(false)}
+				>
 					<span>03</span> Technology
 				</NavLink>
 			</nav>
