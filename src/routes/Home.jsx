@@ -2,15 +2,17 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Body = styled.section`
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 1rem;
-	max-width: 500px;
+	max-width: 450px;
 
-	h1 {
-		color: var(--title-color);
+	@media screen and (min-width: 768px) {
+		margin-top: 5rem;
+		margin-bottom: 7.5rem;
+		gap: 2rem;
 	}
 
 	@media screen and (min-width: 1440px) {
@@ -31,6 +33,16 @@ const MainBtn = styled.h4`
 
 	&:hover {
 		box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.1);
+	}
+
+	@media screen and (min-width: 768px) {
+		margin-top: 0;
+		width: 242px;
+		height: 242px;
+
+		&:hover {
+			box-shadow: 0 0 0 5rem rgba(255, 255, 255, 0.1);
+		}
 	}
 `
 
