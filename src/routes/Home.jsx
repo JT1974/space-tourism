@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-const Container = styled.section`
+const Body = styled.section`
 	margin-top: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 1rem;
+	max-width: 500px;
 
 	h1 {
 		color: var(--title-color);
@@ -36,7 +37,7 @@ const MainBtn = styled.h4`
 export default function Home() {
 	return (
 		<>
-			<Container>
+			<Body>
 				<h5>So, you want to travel to</h5>
 				<h1>Space</h1>
 				<p>
@@ -44,7 +45,7 @@ export default function Home() {
 					hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this
 					world experience!
 				</p>
-			</Container>
+			</Body>
 			<NavLink to='/destination'>
 				<MainBtn>Explore</MainBtn>
 			</NavLink>

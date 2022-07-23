@@ -28,7 +28,6 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: flex-start;
 	gap: 1.5rem;
 	background: var(--background-color);
 	background-size: cover;
@@ -38,10 +37,8 @@ const Container = styled.div`
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-items: center;
 		gap: 2rem;
 		width: 100%;
-		max-width: 500px;
 	}
 `
 

@@ -8,7 +8,6 @@ const Hero = styled.section`
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
-	border-bottom: 1px solid var(--horizontal-line);
 
 	img {
 		height: 170px;
@@ -24,6 +23,7 @@ const Body = styled.section`
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
+	max-width: 500px;
 
 	nav {
 		display: flex;

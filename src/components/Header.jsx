@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Context } from '../Context'
 
 const HeaderBar = styled.header`
+	justify-self: flex-start;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

@@ -24,6 +24,7 @@ const Body = styled.section`
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
+	max-width: 500px;
 
 	nav {
 		display: flex;
