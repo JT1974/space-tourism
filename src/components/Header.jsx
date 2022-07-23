@@ -100,14 +100,23 @@ const HeaderBar = styled.header`
 				display: none;
 			}
 
-			a span {
-				display: none;
+			.nav-text {
+				padding: 0;
+				display: flex;
+				align-items: center;
+				height: 100%;
+				border: none;
+				border-bottom: 3px solid transparent;
+
+				span {
+					display: none;
+				}
 			}
 		}
 	}
 `
 
-const activeLink = { borderColor: 'var(--title-color)' }
+const activeLink = { borderColor: 'var(--title-color)', color: 'var(--title-color)' }
 
 export default function Header() {
 	const { menuOpen, setMenuOpen } = useContext(Context)
