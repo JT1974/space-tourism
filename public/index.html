@@ -46,6 +46,10 @@
       text-transform: uppercase;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     p {
       text-transform: none;
       font-size: 15px;
@@ -57,6 +61,7 @@
     h1 {
       font-size: 80px;
       line-height: 100px;
+      color: var(--title-color);
     }
 
     h2 {
@@ -70,9 +75,9 @@
     }
 
     h4 {
-      font-size: 16px;
-      line-height: 18px;
-
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 1.25px;
     }
 
     h5 {
@@ -94,16 +99,17 @@
 
     .nav-text {
       font-size: 16px;
+      line-height: 19px;
       letter-spacing: 2.7px;
       font-family: var(--sub-font-face);
-      text-decoration: none;
+      color: var(--title-color)
     }
 
     /* tablet and wide mobile*/
     @media screen and (min-width: 768px) {
       p {
-        font-size: 18px;
-        line-height: 32px;
+        font-size: 16px;
+        line-height: 28px;
       }
 
       h1 {
@@ -121,10 +127,13 @@
 
       h4 {
         font-size: 32px;
+        line-height: 37px;
+        letter-spacing: 2px;
       }
 
       h5 {
         font-size: 20px;
+        line-height: 24px;
         letter-spacing: 3.38px;
       }
 
@@ -138,8 +147,9 @@
       }
 
       .nav-text {
-        font-size: 16px;
-        letter-spacing: 2.7px;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 2.36px;
       }
     }
 
