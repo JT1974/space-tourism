@@ -26,11 +26,10 @@ const MainBtn = styled.h4`
 	display: grid;
 	place-content: center;
 	color: var(--background-color);
-	outline: 3rem solid transparent;
 	cursor: pointer;
 
 	&:hover {
-		outline-color: rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.1);
 	}
 `
 

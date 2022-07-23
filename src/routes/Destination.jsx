@@ -18,7 +18,6 @@ const Hero = styled.section`
 		flex-direction: row;
 	}
 `
-// TODO: folytatni az oldalon belüli navigáció stílusát
 
 const Body = styled.section`
 	display: flex;
@@ -27,10 +26,29 @@ const Body = styled.section`
 
 	nav {
 		margin-bottom: 1.5rem;
+		display: flex;
+		gap: 1.5rem;
 
 		button {
 			background: transparent;
 			border: none;
+			font-family: var(--sub-font-face);
+			font-size: 14px;
+			color: var(--button-idle-color);
+			line-height: 17px;
+			letter-spacing: 2.7px;
+			padding-bottom: 8px;
+			border-bottom: 3px solid transparent;
+			cursor: pointer;
+
+			&:hover {
+				border-bottom: 3px solid var(--title-color-hovered);
+			}
+
+			&.active {
+				color: var(--button-active-color);
+				border-bottom: 3px solid var(--button-active-color);
+			}
 		}
 	}
 

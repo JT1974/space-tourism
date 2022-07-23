@@ -16,6 +16,10 @@ import Destination from './routes/Destination'
 import Home from './routes/Home'
 import Technology from './routes/Technology'
 
+import { useContext } from 'react'
+
+import { Context } from './Context'
+
 const Container = styled.div`
 	width: 100vw;
 	height: 100%;
@@ -43,6 +47,8 @@ const Container = styled.div`
 export default function App() {
 	const [windowSize, setWindowSize] = useState(window.innerWidth)
 
+	const { menuOpen, setMenuOpen } = useContext(Context)
+
 	const location = useLocation()
 
 	const resizeWindow = () => setWindowSize(window.innerWidth)
@@ -69,7 +75,7 @@ export default function App() {
 	}, [location, windowSize])
 
 	return (
-		<Container className='app'>
+		<Container className='app' onClick={() => menuOpen && setMenuOpen(false)}>
 			<Header />
 			<main>
 				<Routes>

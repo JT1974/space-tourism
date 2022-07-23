@@ -17,6 +17,7 @@ const HeaderBar = styled.header`
 
 	.openMenu {
 		display: ${props => (props.showModal ? 'none' : 'block')};
+		cursor: pointer;
 	}
 
 	.main-navigation {
@@ -32,12 +33,16 @@ const HeaderBar = styled.header`
 		height: 100%;
 		background: rgba(255, 255, 255, 0.04);
 		backdrop-filter: blur(35px);
-		-webkit-backdrop-filter: blur(35px);
 		z-index: 2;
+
+		@supports (-moz-appearance: none) {
+			background: rgba(0, 0, 0, 0.85);
+		}
 
 		.closeMenu {
 			align-self: flex-end;
 			margin: 2rem 1.5rem;
+			cursor: pointer;
 		}
 
 		.nav-text {
