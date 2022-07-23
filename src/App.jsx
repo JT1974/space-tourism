@@ -40,6 +40,7 @@ const Container = styled.div`
 		align-items: center;
 		justify-items: center;
 		gap: 2rem;
+		width: 100%;
 		max-width: 500px;
 	}
 `

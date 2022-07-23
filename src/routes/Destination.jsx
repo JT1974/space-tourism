@@ -23,9 +23,9 @@ const Body = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 2rem;
 
 	nav {
-		margin-bottom: 1.5rem;
 		display: flex;
 		gap: 1.5rem;
 
@@ -57,7 +57,6 @@ const Body = styled.section`
 		flex-direction: column;
 		align-items: center;
 		padding-bottom: 2rem;
-		margin-bottom: 2rem;
 		border-bottom: 1px solid var(--horizontal-line);
 
 		h2 {

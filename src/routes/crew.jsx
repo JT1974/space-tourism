@@ -8,7 +8,6 @@ const Hero = styled.section`
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
-	width: 100%;
 	border-bottom: 1px solid var(--horizontal-line);
 
 	img {
