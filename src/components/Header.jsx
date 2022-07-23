@@ -10,6 +10,7 @@ const HeaderBar = styled.header`
 	align-items: center;
 	position: relative;
 	width: 100%;
+	padding: 1.5rem 1.5rem 0;
 
 	.logo {
 		width: 2.5rem;
@@ -80,9 +81,20 @@ const HeaderBar = styled.header`
 		}
 
 		.main-navigation {
+			position: unset;
 			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: auto;
+			height: 6rem;
+			gap: 2.25rem;
+			padding: 0 3rem;
 
 			.closeMenu {
+				display: none;
+			}
+
+			a span {
 				display: none;
 			}
 		}
