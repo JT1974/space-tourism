@@ -21,6 +21,7 @@ const Container = styled.div`
 	background: var(--background-color);
 	background-size: cover;
 	background-position: center center;
+	position: relative;
 
 	main {
 		display: flex;
