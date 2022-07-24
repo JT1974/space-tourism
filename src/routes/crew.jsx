@@ -94,6 +94,8 @@ const Body = styled.section`
 			}
 		}
 		.image-container {
+			border: none;
+
 			img {
 				height: 532px;
 			}
