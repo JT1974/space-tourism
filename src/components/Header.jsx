@@ -57,6 +57,7 @@ const HeaderBar = styled.header`
 			span {
 				font-family: var(--sub-font-face);
 				font-weight: 700;
+				color: var(--title-color);
 			}
 		}
 
@@ -112,6 +113,31 @@ const HeaderBar = styled.header`
 					display: none;
 				}
 			}
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		padding-left: 3.5rem;
+
+		.main-navigation {
+			padding: 0 10rem 0 7.5rem;
+			gap: 3rem;
+			position: relative;
+
+			.nav-text {
+				span {
+					display: block;
+					margin-right: 0.5rem;
+				}
+		&:before {
+			content: '';
+			position: absolute;
+			left: -28rem;
+			top: 3rem;
+			width: 30rem;
+			height: 1px;
+			background-color: var(--horizontal-line);
+		}
 		}
 	}
 `
