@@ -3,6 +3,18 @@ import styled from 'styled-components'
 import PageTitle from '../components/PageTitle'
 import { Context } from '../Context'
 
+const Main = styled.main`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+
+	@media screen and (min-width: 1440px) {
+		flex-direction: row;
+	}
+`
+
 const Hero = styled.section`
 	padding-top: 1.5rem;
 	display: flex;
@@ -112,7 +124,7 @@ export default function Crew() {
 	const data = crew?.find(cr => cr.name === member)
 
 	return (
-		<>
+		<Main>
 			<Hero>
 				<PageTitle>
 					<span>02</span> Meet your crew
@@ -146,7 +158,7 @@ export default function Crew() {
 					<p>{data?.bio}</p>
 				</article>
 			</Body>
-		</>
+		</Main>
 	)
 }
 

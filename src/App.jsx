@@ -23,12 +23,8 @@ const Container = styled.div`
 	background-position: center center;
 	position: relative;
 
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-		width: 100%;
+	@media screen and (min-width: 1440px) {
+		padding-top: 2.5rem;
 	}
 `
 
@@ -65,7 +61,7 @@ export default function App() {
 	return (
 		<Container className='app' onClick={() => menuOpen && setMenuOpen(false)}>
 			<Header />
-			<main>
+			<>
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/destination' element={<Destination />} />
@@ -73,7 +69,7 @@ export default function App() {
 					<Route path='/technology' element={<Technology />} />
 				</Routes>
 				<Outlet />
-			</main>
+			</>
 		</Container>
 	)
 }

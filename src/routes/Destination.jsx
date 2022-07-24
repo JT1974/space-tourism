@@ -3,6 +3,18 @@ import styled from 'styled-components'
 import PageTitle from '../components/PageTitle'
 import { Context } from '../Context'
 
+const Main = styled.main`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+
+	@media screen and (min-width: 1440px) {
+		flex-direction: row;
+	}
+`
+
 const Hero = styled.section`
 	padding-top: 1.5rem;
 	display: flex;
@@ -139,7 +151,7 @@ export default function Destination() {
 	const data = destinations?.find(dest => dest.name === destination)
 
 	return (
-		<>
+		<Main>
 			<Hero>
 				<PageTitle>
 					<span>01</span> Pick your destination
@@ -181,7 +193,7 @@ export default function Destination() {
 					</div>
 				</div>
 			</Body>
-		</>
+		</Main>
 	)
 }
 

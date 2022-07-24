@@ -1,6 +1,18 @@
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
+const Main = styled.main`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+
+	@media screen and (min-width: 1440px) {
+		flex-direction: row;
+	}
+`
+
 const Body = styled.section`
 	margin-top: 3rem;
 	padding: 0 1.5rem;
@@ -17,7 +29,6 @@ const Body = styled.section`
 	}
 
 	@media screen and (min-width: 1440px) {
-		flex-direction: row;
 	}
 `
 
@@ -49,7 +60,7 @@ const MainBtn = styled.h4`
 
 export default function Home() {
 	return (
-		<>
+		<Main>
 			<Body>
 				<h5>So, you want to travel to</h5>
 				<h1>Space</h1>
@@ -62,7 +73,7 @@ export default function Home() {
 			<NavLink to='/destination'>
 				<MainBtn>Explore</MainBtn>
 			</NavLink>
-		</>
+		</Main>
 	)
 }
 
