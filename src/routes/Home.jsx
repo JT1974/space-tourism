@@ -10,6 +10,9 @@ const Main = styled.main`
 
 	@media screen and (min-width: 1440px) {
 		flex-direction: row;
+		padding: 0 10rem 8rem;
+		align-items: flex-end;
+		justify-content: space-between;
 	}
 `
 
@@ -29,6 +32,13 @@ const Body = styled.section`
 	}
 
 	@media screen and (min-width: 1440px) {
+		margin: 0;
+		padding: 0;
+		align-items: flex-start;
+
+		p {
+			text-align: left;
+		}
 	}
 `
 
