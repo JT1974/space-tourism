@@ -164,7 +164,7 @@ export default function Header() {
 				/>
 				<NavLink
 					className='nav-text'
-					to='/space-tourism/'
+					to='/'
 					style={({ isActive }) => (isActive ? activeLink : undefined)}
 					onClick={() => setMenuOpen(false)}
 				>
@@ -172,7 +172,7 @@ export default function Header() {
 				</NavLink>
 				<NavLink
 					className='nav-text'
-					to='/space-tourism/destination'
+					to='/destination'
 					style={({ isActive }) => (isActive ? activeLink : undefined)}
 					onClick={() => setMenuOpen(false)}
 				>
@@ -180,7 +180,7 @@ export default function Header() {
 				</NavLink>
 				<NavLink
 					className='nav-text'
-					to='/space-tourism/crew'
+					to='/crew'
 					style={({ isActive }) => (isActive ? activeLink : undefined)}
 					onClick={() => setMenuOpen(false)}
 				>
@@ -188,7 +188,7 @@ export default function Header() {
 				</NavLink>
 				<NavLink
 					className='nav-text'
-					to='/space-tourism/technology'
+					to='/technology'
 					style={({ isActive }) => (isActive ? activeLink : undefined)}
 					onClick={() => setMenuOpen(false)}
 				>

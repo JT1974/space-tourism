@@ -48,25 +48,26 @@ export default function App() {
 		const app = document.querySelector('.app')
 
 		/* active page */
-		const page = location.pathname.slice(1)
+		const page = location.pathname.slice(15)
+		console.log(page)
 
 		/* device */
 		const device = windowSize < 768 ? 'mobile' : windowSize < 1440 ? 'tablet' : 'desktop'
 
 		/* change background image */
 		app.style.backgroundImage = !page
-			? `url('../assets/home/background-home-${device}.jpg')`
-			: `url('../assets/${page}/background-${page}-${device}.jpg')`
+			? `url('/assets/home/background-home-${device}.jpg')`
+			: `url('/assets/${page}/background-${page}-${device}.jpg')`
 	}, [location, windowSize])
 
 	return (
 		<Container className='app' onClick={() => menuOpen && setMenuOpen(false)}>
 			<Header />
 			<Routes>
-				<Route path='/space-tourism/' element={<Home />} />
-				<Route path='/space-tourism/destination' element={<Destination />} />
-				<Route path='/space-tourism/crew' element={<Crew />} />
-				<Route path='/space-tourism/technology' element={<Technology width={windowSize} />} />
+				<Route path='/' element={<Home />} />
+				<Route path='/destination' element={<Destination />} />
+				<Route path='/crew' element={<Crew />} />
+				<Route path='/technology' element={<Technology width={windowSize} />} />
 			</Routes>
 			<Outlet />
 		</Container>
