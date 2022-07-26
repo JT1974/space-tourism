@@ -71,7 +71,6 @@ Further refactoring and simplification is needed, because the component styling 
 
 -   [React Router documentation](https://reactrouter.com/docs/en/v6/getting-started/overview)
 -   [W3C Markup Validator](https://validator.w3.org/)
--   [Accessibility checker](https://www.accessibilitychecker.org/)
 
 ## Author
 
