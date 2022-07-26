@@ -59,12 +59,12 @@ const Main = styled.main`
 
 			nav {
 				display: flex;
-				gap: 1rem;
+				gap: 1.5rem;
 
 				button {
 					cursor: pointer;
-					width: 10px;
-					height: 10px;
+					width: 20px;
+					height: 20px;
 					border-radius: 50%;
 					border: none;
 					background-color: var(--button-active-color);
@@ -179,6 +179,15 @@ const Main = styled.main`
 				animation-duration: 2s;
 				animation-name: slidein;
 				animation-delay: 0.5s;
+
+				nav {
+					gap: 1rem;
+
+					button {
+						width: 15px;
+						height: 15px;
+					}
+				}
 
 				article {
 					margin-top: 2rem;
