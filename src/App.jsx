@@ -30,6 +30,12 @@ const Container = styled.div`
 	}
 `
 
+const Footer = styled.footer`
+	grid-row: 3/4;
+	grid-column: 1/4;
+	background: rgba(0, 0, 0, 0.5);
+`
+
 export default function App() {
 	const [windowSize, setWindowSize] = useState(window.innerWidth)
 
@@ -70,7 +76,9 @@ export default function App() {
 				<Route path='/space-tourism/technology' element={<Technology width={windowSize} />} />
 			</Routes>
 			<Outlet />
-			<Attribution />
+			<Footer>
+				<Attribution />
+			</Footer>
 		</Container>
 	)
 }

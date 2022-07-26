@@ -4,9 +4,6 @@ const AttributionContainer = styled.div`
 	width: 100%;
 	margin: 0 auto;
 	padding: 0.5rem 1rem;
-	grid-row: 3/4;
-	grid-column: 1/4;
-	background: rgba(0, 0, 0, 0.5);
 
 	font-family: sans-serif;
 	font-size: 0.6rem;
