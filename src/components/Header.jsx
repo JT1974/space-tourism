@@ -39,7 +39,7 @@ const HeaderBar = styled.header`
 		z-index: 2;
 
 		@supports (-moz-appearance: none) {
-			background: rgba(255, 255, 255, 0.04);
+			background: rgba(0, 0, 0, 0.9);
 		}
 
 		.closeMenu {

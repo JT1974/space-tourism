@@ -174,8 +174,6 @@ const Main = styled.main`
 		.page-body {
 			grid-row: 2/3;
 			grid-column: 1/2;
-			flex-direction: row;
-			align-items: space-between;
 			padding: 0;
 			gap: 6rem;
 
