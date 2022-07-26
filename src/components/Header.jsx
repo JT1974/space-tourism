@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Context } from '../Context'
 
 const HeaderBar = styled.header`
+	grid-column: 2/3;
 	justify-self: flex-start;
 	display: flex;
 	justify-content: space-between;
@@ -34,11 +35,11 @@ const HeaderBar = styled.header`
 		width: 254px;
 		height: 100%;
 		background: rgba(255, 255, 255, 0.04);
-		backdrop-filter: blur(35px);
+		backdrop-filter: blur(81px);
 		z-index: 2;
 
 		@supports (-moz-appearance: none) {
-			background: rgba(0, 0, 0, 0.75);
+			background: rgba(255, 255, 255, 0.04);
 		}
 
 		.closeMenu {
@@ -63,10 +64,6 @@ const HeaderBar = styled.header`
 
 		.nav-text:hover {
 			border-color: var(--title-color-hovered);
-		}
-
-		&::backdrop {
-			background: rgba(255, 255, 255, 0.04);
 		}
 	}
 
@@ -94,7 +91,7 @@ const HeaderBar = styled.header`
 			padding: 0 3rem;
 
 			@supports (-moz-appearance: none) {
-				background: rgba(255, 255, 255, 0.1);
+				background: rgba(255, 255, 255, 0.04);
 			}
 
 			.closeMenu {
@@ -129,15 +126,17 @@ const HeaderBar = styled.header`
 					display: block;
 					margin-right: 0.5rem;
 				}
-		&:before {
-			content: '';
-			position: absolute;
-			left: -28rem;
-			top: 3rem;
-			width: 30rem;
-			height: 1px;
-			background-color: var(--horizontal-line);
-		}
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: -29.5rem;
+					top: 3rem;
+					width: 31.5rem;
+					height: 1px;
+					background-color: var(--horizontal-line);
+				}
+			}
 		}
 	}
 `

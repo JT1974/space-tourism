@@ -2,20 +2,20 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Main = styled.main`
+	grid-column: 2/3;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 2rem;
 	width: 100%;
+	max-width: 500px;
 
 	section {
-		margin-top: 3rem;
 		padding: 0 1.5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 1rem;
-		max-width: 450px;
 	}
 
 	h4 {
@@ -35,8 +35,11 @@ const Main = styled.main`
 	}
 
 	@media screen and (min-width: 768px) {
+		max-width: 768px;
+		padding: 0 3rem;
+
 		section {
-			margin-top: 6.5rem;
+			padding: 0;
 			margin-bottom: 7.5rem;
 			gap: 2rem;
 		}
@@ -54,9 +57,12 @@ const Main = styled.main`
 
 	@media screen and (min-width: 1440px) {
 		flex-direction: row;
-		padding: 0 10rem 8rem;
+		padding: 0 10rem;
 		align-items: flex-end;
 		justify-content: space-between;
+		max-width: 1440px;
+		justify-self: center;
+		gap: 24rem;
 
 		section {
 			margin: 0;
@@ -65,6 +71,15 @@ const Main = styled.main`
 
 			p {
 				text-align: left;
+			}
+		}
+
+		h4 {
+			width: 274px;
+			height: 274px;
+
+			&:hover {
+				box-shadow: 0 0 0 5.5rem rgba(255, 255, 255, 0.1);
 			}
 		}
 	}

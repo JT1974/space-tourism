@@ -15,8 +15,9 @@ const Container = styled.div`
 	width: 100vw;
 	height: 100%;
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 1fr auto 1fr;
 	align-items: center;
 	background: var(--background-color);
 	background-size: cover;
@@ -25,7 +26,6 @@ const Container = styled.div`
 
 	@media screen and (min-width: 1440px) {
 		padding-top: 2.5rem;
-		justify-content: space-between;
 	}
 `
 
@@ -66,7 +66,7 @@ export default function App() {
 				<Route path='/' element={<Home />} />
 				<Route path='/destination' element={<Destination />} />
 				<Route path='/crew' element={<Crew />} />
-				<Route path='/technology' element={<Technology />} />
+				<Route path='/technology' element={<Technology width={windowSize} />} />
 			</Routes>
 			<Outlet />
 		</Container>
