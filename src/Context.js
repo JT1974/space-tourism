@@ -6,7 +6,7 @@ function ContextProvider(props) {
 	const [menuOpen, setMenuOpen] = useState(false)
 
 	useEffect(() => {
-		fetch('./assets/data.json')
+		fetch('./space-tourism/assets/data.json')
 			.then(res => res.json())
 			.then(data => setJSONData(data))
 	}, [])

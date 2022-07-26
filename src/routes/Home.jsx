@@ -97,7 +97,7 @@ export default function Home() {
 					world experience!
 				</p>
 			</section>
-			<NavLink to='/destination'>
+			<NavLink to='/space-tourism/destination'>
 				<h4>Explore</h4>
 			</NavLink>
 		</Main>
