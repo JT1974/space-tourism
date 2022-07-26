@@ -59,6 +59,7 @@ const HeaderBar = styled.header`
 				font-family: var(--sub-font-face);
 				font-weight: 700;
 				color: var(--title-color);
+				background-color: transition;
 			}
 		}
 
@@ -148,23 +149,23 @@ export default function Header() {
 
 	return (
 		<HeaderBar showModal={menuOpen}>
-			<img className='logo' src='/assets/shared/logo.svg' alt='Space tourism' />
+			<img className='logo' src='./assets/shared/logo.svg' alt='Space tourism' />
 			<img
 				className='openMenu'
-				src='/assets/shared/icon-hamburger.svg'
+				src='./assets/shared/icon-hamburger.svg'
 				alt='Open menu'
 				onClick={() => setMenuOpen(true)}
 			/>
 			<nav className='main-navigation'>
 				<img
 					className='closeMenu'
-					src='/assets/shared/icon-close.svg'
+					src='./assets/shared/icon-close.svg'
 					alt='Close menu'
 					onClick={() => setMenuOpen(false)}
 				/>
 				<NavLink
 					className='nav-text'
-					to='/'
+					to='/space-tourism/'
 					style={({ isActive }) => (isActive ? activeLink : undefined)}
 					onClick={() => setMenuOpen(false)}
 				>
@@ -172,7 +173,7 @@ export default function Header() {
 				</NavLink>
 				<NavLink
 					className='nav-text'
-					to='/destination'
+					to='/space-tourism/destination'
 					style={({ isActive }) => (isActive ? activeLink : undefined)}
 					onClick={() => setMenuOpen(false)}
 				>
@@ -180,7 +181,7 @@ export default function Header() {
 				</NavLink>
 				<NavLink
 					className='nav-text'
-					to='/crew'
+					to='/space-tourism/crew'
 					style={({ isActive }) => (isActive ? activeLink : undefined)}
 					onClick={() => setMenuOpen(false)}
 				>
@@ -188,7 +189,7 @@ export default function Header() {
 				</NavLink>
 				<NavLink
 					className='nav-text'
-					to='/technology'
+					to='/space-tourism/technology'
 					style={({ isActive }) => (isActive ? activeLink : undefined)}
 					onClick={() => setMenuOpen(false)}
 				>

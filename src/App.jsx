@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
+import Attribution from './components/Attribution'
 import Header from './components/Header'
 import Crew from './routes/Crew'
 import Destination from './routes/Destination'
@@ -16,7 +17,7 @@ const Container = styled.div`
 	height: 100%;
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: auto 1fr;
+	grid-template-rows: auto 1fr 2rem;
 	grid-template-columns: 1fr auto 1fr;
 	align-items: center;
 	background: var(--background-color);
@@ -49,27 +50,27 @@ export default function App() {
 
 		/* active page */
 		const page = location.pathname.slice(15)
-		console.log(`page: ${page}`)
 
 		/* device */
 		const device = windowSize < 768 ? 'mobile' : windowSize < 1440 ? 'tablet' : 'desktop'
 
 		/* change background image */
 		app.style.backgroundImage = !page
-			? `url('/assets/home/background-home-${device}.jpg')`
-			: `url('/assets/${page}/background-${page}-${device}.jpg')`
+			? `url('./assets/home/background-home-${device}.jpg')`
+			: `url('./assets/${page}/background-${page}-${device}.jpg')`
 	}, [location, windowSize])
 
 	return (
 		<Container className='app' onClick={() => menuOpen && setMenuOpen(false)}>
 			<Header />
 			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/destination' element={<Destination />} />
-				<Route path='/crew' element={<Crew />} />
-				<Route path='/technology' element={<Technology width={windowSize} />} />
+				<Route path='/space-tourism/' element={<Home />} />
+				<Route path='/space-tourism/destination' element={<Destination />} />
+				<Route path='/space-tourism/crew' element={<Crew />} />
+				<Route path='/space-tourism/technology' element={<Technology width={windowSize} />} />
 			</Routes>
 			<Outlet />
+			<Attribution style={{ gridRow: '3/4', gridColumn: '1/4' }} />
 		</Container>
 	)
 }

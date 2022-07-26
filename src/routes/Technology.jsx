@@ -71,6 +71,7 @@ const Main = styled.main`
 					color: var(--title-color);
 					font-size: 16px;
 					line-height: 18px;
+					transition: all 0.5s ease-in-out;
 
 					&:hover {
 						border: 1px solid var(--title-color);

@@ -66,6 +66,7 @@ const Main = styled.main`
 					padding-bottom: 8px;
 					border-bottom: 3px solid transparent;
 					cursor: pointer;
+					transition: all 0.5s ease-in-out;
 
 					&:hover {
 						border-bottom: 3px solid var(--title-color-hovered);

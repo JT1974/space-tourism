@@ -28,6 +28,7 @@ const Main = styled.main`
 		place-content: center;
 		color: var(--background-color);
 		cursor: pointer;
+		transition: all 0.5s ease-in-out;
 
 		&:hover {
 			box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.1);
@@ -97,7 +98,7 @@ export default function Home() {
 					world experience!
 				</p>
 			</section>
-			<NavLink to='/destination'>
+			<NavLink to='/space-tourism/destination'>
 				<h4>Explore</h4>
 			</NavLink>
 		</Main>

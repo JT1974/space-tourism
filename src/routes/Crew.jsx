@@ -63,6 +63,7 @@ const Main = styled.main`
 					border: none;
 					background-color: var(--button-active-color);
 					opacity: 0.17;
+					transition: all 0.5s ease-in-out;
 
 					&:hover {
 						opacity: 0.5;
