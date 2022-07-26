@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "./static/js/main.fbaab35b.js",
-    "index.html": "./index.html",
-    "main.fbaab35b.js.map": "./static/js/main.fbaab35b.js.map"
+    "main.js": "./space-tourism/static/js/main.0b0caea9.js",
+    "index.html": "./space-tourism/index.html",
+    "main.0b0caea9.js.map": "./space-tourism/static/js/main.0b0caea9.js.map"
   },
   "entrypoints": [
-    "static/js/main.fbaab35b.js"
+    "static/js/main.0b0caea9.js"
   ]
 }
