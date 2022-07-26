@@ -49,7 +49,7 @@ export default function App() {
 
 		/* active page */
 		const page = location.pathname.slice(15)
-		console.log(page)
+		console.log(`page: ${page}`)
 
 		/* device */
 		const device = windowSize < 768 ? 'mobile' : windowSize < 1440 ? 'tablet' : 'desktop'
