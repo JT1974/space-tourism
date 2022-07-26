@@ -31,6 +31,8 @@ const Main = styled.main`
 		display: flex;
 		justify-content: center;
 		border-bottom: 1px solid var(--horizontal-line);
+		animation-duration: 2s;
+		animation-name: slideup;
 
 		img {
 			height: 100%;
@@ -50,6 +52,10 @@ const Main = styled.main`
 			align-items: center;
 			gap: 2rem;
 			width: 100%;
+			animation-fill-mode: backwards;
+			animation-duration: 2s;
+			animation-name: slidein;
+			animation-delay: 1s;
 
 			nav {
 				display: flex;
@@ -100,6 +106,42 @@ const Main = styled.main`
 		}
 	}
 
+	@keyframes slideup {
+		from {
+			transform: translateY(60vh);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slidedown {
+		from {
+			transform: translateY(-40vh);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slidein {
+		from {
+			transform: translateX(-100vw);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
 	@media screen and (min-width: 768px) {
 		grid-template-rows: auto 1fr 536px;
 		max-width: 768px;
@@ -116,6 +158,8 @@ const Main = styled.main`
 			align-self: flex-end;
 			border: none;
 			height: 100%;
+			animation-duration: 1.5s;
+			animation-name: slideup;
 
 			img {
 				height: 536px;
@@ -132,6 +176,9 @@ const Main = styled.main`
 
 			.data-container {
 				flex-direction: column-reverse;
+				animation-duration: 2s;
+				animation-name: slidein;
+				animation-delay: 0.5s;
 
 				article {
 					margin-top: 2rem;

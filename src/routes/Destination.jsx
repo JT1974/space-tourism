@@ -37,6 +37,8 @@ const Main = styled.main`
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
+			animation-duration: 2s;
+			animation-name: slidein;
 
 			img {
 				width: 170px;
@@ -50,6 +52,8 @@ const Main = styled.main`
 			align-items: center;
 			gap: 2rem;
 			width: 100%;
+			animation-duration: 2s;
+			animation-name: slideup;
 
 			nav {
 				display: flex;
@@ -113,6 +117,42 @@ const Main = styled.main`
 					color: var(--title-color);
 				}
 			}
+		}
+	}
+
+	@keyframes slideup {
+		from {
+			transform: translateY(40vh);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slidedown {
+		from {
+			transform: translateY(-40vh);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slidein {
+		from {
+			transform: translateX(-50vw);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateX(0);
+			opacity: 1;
 		}
 	}
 

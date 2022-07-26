@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 const Title = styled.h5`
 	color: var(--title-color);
+	animation-duration: 2s;
+	animation-name: slidedown;
 
 	span {
 		font-family: var(--sub-font-face);

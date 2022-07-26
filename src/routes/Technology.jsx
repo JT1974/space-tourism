@@ -31,6 +31,8 @@ const Main = styled.main`
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
+		animation-duration: 2s;
+		animation-name: slidein;
 
 		img {
 			height: 100%;
@@ -56,6 +58,8 @@ const Main = styled.main`
 			width: 100%;
 			height: 270px;
 			margin-bottom: 5rem;
+			animation-duration: 2s;
+			animation-name: slideup;
 
 			nav {
 				display: flex;
@@ -104,6 +108,42 @@ const Main = styled.main`
 					max-width: 500px;
 				}
 			}
+		}
+	}
+
+	@keyframes slideup {
+		from {
+			transform: translateY(40vh);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slidedown {
+		from {
+			transform: translateY(-10vh);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slidein {
+		from {
+			transform: translateX(-50vw);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateX(0);
+			opacity: 1;
 		}
 	}
 
@@ -167,6 +207,8 @@ const Main = styled.main`
 			grid-column: 2/3;
 			align-self: center;
 			align-items: flex-start;
+			animation-duration: 2s;
+			animation-name: slideup;
 
 			img {
 				height: 527px;
@@ -186,6 +228,8 @@ const Main = styled.main`
 				padding-top: 6rem;
 				height: 636px;
 				align-items: flex-start;
+				animation-duration: 2s;
+				animation-name: slidein;
 
 				nav {
 					flex-direction: column;

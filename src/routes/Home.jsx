@@ -16,6 +16,8 @@ const Main = styled.main`
 		flex-direction: column;
 		align-items: center;
 		gap: 1rem;
+		animation-duration: 2s;
+		animation-name: slidein;
 	}
 
 	h4 {
@@ -29,9 +31,35 @@ const Main = styled.main`
 		color: var(--background-color);
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
+		animation-duration: 2s;
+		animation-name: slideup;
 
 		&:hover {
 			box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.1);
+		}
+	}
+
+	@keyframes slideup {
+		from {
+			transform: translateY(40vh);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slidein {
+		from {
+			transform: translateX(-50vw);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateX(0);
+			opacity: 1;
 		}
 	}
 
