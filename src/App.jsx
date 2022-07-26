@@ -70,7 +70,7 @@ export default function App() {
 				<Route path='/space-tourism/technology' element={<Technology width={windowSize} />} />
 			</Routes>
 			<Outlet />
-			<Attribution style={{ gridRow: '3/4', gridColumn: '1/4' }} />
+			<Attribution />
 		</Container>
 	)
 }
